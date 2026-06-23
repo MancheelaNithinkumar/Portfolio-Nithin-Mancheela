@@ -1,0 +1,234 @@
+.payphoneGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Ringing Payphone Pixel Art styles */
+.payphoneVisual {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.phoneBooth {
+  width: 220px;
+  height: 300px;
+  background-color: rgba(11, 0, 26, 0.9);
+  border: 4px solid var(--pink);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.boothHeader {
+  background: var(--purple);
+  border-bottom: 4px solid var(--pink);
+  padding: 8px;
+  text-align: center;
+}
+
+.neonText {
+  font-family: var(--font-retro);
+  font-size: 0.75rem;
+  color: var(--cyan);
+  text-shadow: 0 0 8px var(--cyan);
+  letter-spacing: 2px;
+}
+
+.boothBody {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Payphone box and receiver styling */
+.phoneBase {
+  position: relative;
+  width: 60px;
+  height: 100px;
+  background: #333;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+
+.cradle {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 20px;
+  height: 8px;
+  background: #777;
+  border-radius: 2px;
+}
+
+.receiver {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 36px;
+  height: 14px;
+  background: var(--pink);
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--pink);
+}
+
+.dialPad {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 30px;
+  height: 35px;
+  background: #222;
+  border: 1px solid #555;
+  background-image: radial-gradient(#fff 20%, transparent 20%);
+  background-size: 8px 8px;
+}
+
+/* Vibration ringing effect */
+.ringingPhone {
+  animation: ringVibrate 0.8s infinite;
+}
+
+@keyframes ringVibrate {
+  0%, 80%, 100% { transform: rotate(0) scale(1); }
+  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75% { transform: rotate(-6deg) scale(1.02); }
+  10%, 20%, 30%, 40%, 50%, 60%, 70% { transform: rotate(6deg) scale(1.02); }
+}
+
+/* Contact Links Card */
+.contactsCard {
+  background-color: rgba(18, 0, 36, 0.7);
+  border: 3px double var(--cyan);
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.contactTitle {
+  font-family: var(--font-retro);
+  font-size: 0.75rem;
+  color: var(--yellow);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkIcon {
+  font-size: 1.1rem;
+}
+
+.contactLink {
+  font-family: var(--font-vcr);
+  font-size: 1.3rem;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 5px var(--cyan);
+}
+
+/* Message Form Dossier Box */
+.formBox {
+  background-color: rgba(18, 0, 36, 0.85);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.15);
+  border-radius: 0;
+}
+
+.formHeader {
+  background: var(--purple);
+  padding: 10px 15px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+  font-family: var(--font-retro);
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1px;
+}
+
+.payphoneForm {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-family: var(--font-retro);
+  font-size: 0.6rem;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+
+.retroInput {
+  background-color: #0b001a;
+  border: 2px solid var(--pink);
+  color: #fff;
+  font-family: var(--font-vcr);
+  font-size: 1.4rem;
+  padding: 10px 14px;
+  letter-spacing: 1.5px;
+  outline: none;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.retroInput:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
+  background-color: #120024;
+}
+
+.retroInput::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.retroTextArea {
+  resize: none;
+}
+
+.statusDisplay {
+  font-family: var(--font-retro);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px dashed;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .payphoneGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .phoneBooth {
+    width: 180px;
+    height: 250px;
+  }
+}

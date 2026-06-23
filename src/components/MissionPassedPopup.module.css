@@ -1,0 +1,139 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(11, 0, 26, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  animation: overlayFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.popupBox {
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(18, 0, 36, 0.95);
+  border: 6px solid var(--yellow);
+  box-shadow: 0 0 30px rgba(255, 214, 10, 0.3);
+  max-width: 600px;
+  width: 90%;
+  animation: boxZoomIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.passedHeader {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  color: var(--yellow);
+  text-shadow: 
+    -3px -3px 0 var(--purple),
+     3px -3px 0 var(--purple),
+    -3px  3px 0 var(--purple),
+     3px  3px 0 var(--purple),
+     0 0 20px rgba(255, 214, 10, 0.6);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.divider {
+  height: 6px;
+  background-color: var(--pink);
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 0 10px var(--pink);
+}
+
+.missionTitle {
+  font-family: var(--font-retro);
+  font-size: 1.25rem;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.rewardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-family: var(--font-retro);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.rewardLabel {
+  color: var(--cyan);
+}
+
+.rewardValue {
+  color: #fff;
+  text-shadow: 0 0 8px var(--cyan);
+}
+
+.respectText {
+  font-family: var(--font-retro);
+  font-size: 2.2rem;
+  color: var(--orange);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0px #000, 0 0 15px rgba(255, 109, 0, 0.7);
+  animation: respectPulse 1s infinite alternate;
+}
+
+.clickHint {
+  margin-top: 30px;
+  font-family: var(--font-vcr);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes boxZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes respectPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 3px 3px 0px #000, 0 0 10px rgba(255, 109, 0, 0.5);
+  }
+  100% {
+    transform: scale(1.1) rotate(-1deg);
+    text-shadow: 3px 3px 0px #000, 0 0 25px rgba(255, 109, 0, 0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .passedHeader {
+    font-size: 2.8rem;
+  }
+  .missionTitle {
+    font-size: 0.9rem;
+  }
+  .rewardContainer {
+    font-size: 0.85rem;
+  }
+  .respectText {
+    font-size: 1.5rem;
+  }
+  .clickHint {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,239 @@
+.dossierCard {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(18, 0, 36, 0.85);
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.25);
+  border-radius: 0;
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--purple);
+  padding: 10px 15px;
+  border-bottom: 3px solid var(--pink);
+}
+
+.terminalDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminalTitle {
+  margin-left: 10px;
+  font-family: var(--font-retro);
+  font-size: 0.7rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.terminalContent {
+  padding: 24px;
+}
+
+.terminalIntro {
+  font-family: var(--font-vcr);
+  font-size: 1.5rem;
+  color: var(--cyan);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.cursor {
+  animation: cursorBlink 0.8s infinite;
+  color: var(--cyan);
+}
+
+.dossierGrid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Mugshot Panel & CSS Pixel Art */
+.mugshotContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pixelMugshot {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  background: #2b004f;
+  border: 4px solid var(--pink);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+/* Tommy Vercetti style CSS Pixel Art mugshot */
+.mugshotHair {
+  position: absolute;
+  top: 25px;
+  left: 45px;
+  width: 90px;
+  height: 60px;
+  background: #1d0f04;
+  box-shadow: 
+    -10px 10px 0 #1d0f04,
+    10px 10px 0 #1d0f04,
+    -15px 25px 0 #1d0f04,
+    15px 25px 0 #1d0f04;
+}
+
+.mugshotFace {
+  position: absolute;
+  top: 60px;
+  left: 55px;
+  width: 70px;
+  height: 80px;
+  background: #ffd3b6;
+  box-shadow: 
+    -5px 15px 0 #ffd3b6,
+    5px 15px 0 #ffd3b6,
+    -10px 30px 0 #ffd3b6,
+    10px 30px 0 #ffd3b6;
+}
+
+.mugshotSunglasses {
+  position: absolute;
+  top: 75px;
+  left: 45px;
+  width: 90px;
+  height: 20px;
+  background: #000;
+  border: 2px solid var(--cyan);
+  box-shadow: 
+    inset 15px 0 0 rgba(0,255,255,0.4),
+    inset -15px 0 0 rgba(0,255,255,0.4);
+}
+
+.mugshotShirt {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 140px;
+  height: 90px;
+  background: #00b4d8; /* Hawaiian teal shirt */
+  clip-path: polygon(10% 100%, 30% 0%, 50% 30%, 70% 0%, 90% 100%);
+  border: 2px solid #fff;
+  /* Hawaiian leaves / flowers patterns using box-shadows */
+  box-shadow: 
+    25px 25px 0 #ffeb3b,
+    50px 35px 0 #fff,
+    90px 20px 0 #ffeb3b,
+    110px 45px 0 #fff;
+}
+
+.mugshotPlate {
+  width: 100%;
+  max-width: 200px;
+  background: #000;
+  border: 2px solid #fff;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-retro);
+  font-size: 0.55rem;
+  color: #fff;
+  letter-spacing: 1px;
+  gap: 4px;
+}
+
+/* Fields Styling */
+.fileFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-vcr);
+}
+
+.fieldRow {
+  display: flex;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+  padding-bottom: 8px;
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+}
+
+.fieldLabel {
+  width: 200px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--font-retro);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.fieldValue {
+  color: #fff;
+  font-weight: 700;
+}
+
+.activeStatus {
+  background: #008000;
+  border: 2px solid #00ff00;
+  color: #fff;
+  font-family: var(--font-retro);
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  text-shadow: 0 0 5px #00ff00;
+  letter-spacing: 2px;
+}
+
+.divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--orange) 50%, var(--cyan) 100%);
+  margin: 10px 0;
+}
+
+.recordLog {
+  margin-top: 10px;
+}
+
+.logTitle {
+  font-family: var(--font-retro);
+  font-size: 0.75rem;
+  color: var(--yellow);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.logText {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+@keyframes cursorBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .dossierGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+  }
+  .fileFields {
+    width: 100%;
+  }
+  .fieldLabel {
+    width: 120px;
+    font-size: 0.65rem;
+  }
+  .fieldRow {
+    font-size: 1.3rem;
+  }
+}

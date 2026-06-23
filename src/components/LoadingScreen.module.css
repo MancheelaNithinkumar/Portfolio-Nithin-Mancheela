@@ -1,0 +1,164 @@
+.loadingWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #000;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.loadingBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.65;
+  transition: background 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.gridOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(255, 0, 128, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 128, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+.artShowcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  animation: artFade 1s cubic-bezier(0.2, 0.8, 0.2, 1) infinite alternate;
+}
+
+.pixelEmoji {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: bounceEmoji 0.5s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  font-family: var(--font-retro);
+  font-size: 1.25rem;
+  letter-spacing: 4px;
+  margin-top: 10px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.roleBadge {
+  margin-top: 25px;
+  padding: 8px 16px;
+  font-family: var(--font-retro);
+  font-size: 0.8rem;
+  border: 3px double;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.loadingBarContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.statusText {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-retro);
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px #000;
+}
+
+.loadingBarOutline {
+  width: 100%;
+  height: 24px;
+  background: #000;
+  border: 4px solid #fff;
+  padding: 2px;
+  box-shadow: 0px 5px 15px rgba(255, 0, 128, 0.4);
+}
+
+.loadingBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--cyan) 100%);
+  box-shadow: 0 0 10px var(--cyan);
+  transition: width 0.05s linear;
+}
+
+.hintText {
+  font-family: var(--font-vcr);
+  font-size: 1.25rem;
+  color: var(--yellow);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+@keyframes artFade {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+@keyframes bounceEmoji {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-10px) scale(1.05); }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 40px 20px;
+  }
+  .pixelEmoji {
+    font-size: 3.5rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .roleBadge {
+    font-size: 0.65rem;
+  }
+  .statusText {
+    font-size: 0.65rem;
+  }
+}

@@ -1,0 +1,108 @@
+.hudContainer {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: var(--font-retro);
+  pointer-events: none; /* Let scroll/clicks pass through to content */
+  background: var(--hud-bg);
+  padding: 15px 20px;
+  border: 3px double var(--pink);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.hudClock {
+  font-size: 1.8rem;
+  color: var(--orange);
+  text-shadow: 2px 2px 0px #000, 0 0 10px rgba(255, 109, 0, 0.4);
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.wantedContainer {
+  display: flex;
+  margin: 2px 0;
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 170px;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  width: 18px;
+  text-align: center;
+}
+
+.barValue {
+  font-size: 0.75rem;
+  color: #fff;
+  width: 32px;
+  text-align: right;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.barOutline {
+  flex-grow: 1;
+  height: 12px;
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 1px;
+}
+
+.barFill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.hudMoney {
+  font-size: 2rem;
+  color: var(--cyan);
+  text-shadow: 2px 2px 0px #000, 0 0 15px rgba(0, 255, 255, 0.5);
+  letter-spacing: 1px;
+  font-family: var(--font-retro);
+  margin-top: 4px;
+}
+
+/* Adjust HUD for smaller mobile viewports */
+@media (max-width: 768px) {
+  .hudContainer {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    gap: 4px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+  .hudClock {
+    font-size: 1.2rem;
+  }
+  .barsContainer {
+    width: 110px;
+  }
+  .barOutline {
+    height: 8px;
+  }
+  .hudMoney {
+    font-size: 1.2rem;
+  }
+  .statLabel {
+    font-size: 0.7rem;
+  }
+  .barValue {
+    font-size: 0.6rem;
+  }
+}

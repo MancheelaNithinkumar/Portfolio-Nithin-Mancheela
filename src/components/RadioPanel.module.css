@@ -1,0 +1,173 @@
+.radioWrapper {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1000;
+  width: 260px;
+  background-color: var(--hud-bg);
+  border: 3px double var(--pink);
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--font-retro);
+  transition: all 0.3s ease;
+}
+
+.radioScreen {
+  background-color: #0b001a;
+  border: 2px solid var(--cyan);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.screenRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  color: var(--pink);
+}
+
+.stationFreq {
+  color: var(--yellow);
+}
+
+.stationName {
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 0 5px var(--cyan);
+  letter-spacing: 1px;
+}
+
+.genreText {
+  font-family: var(--font-vcr);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 1px;
+}
+
+.visualizer {
+  width: 100%;
+  height: 35px;
+  margin-top: 6px;
+  border-top: 1px dashed rgba(0, 255, 255, 0.2);
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.playBtn {
+  font-family: var(--font-retro);
+  font-size: 0.65rem;
+  background-color: var(--purple);
+  border: 2px solid var(--pink);
+  color: #fff;
+  padding: 6px 12px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+  transition: all 0.15s ease;
+}
+
+.playBtn:hover {
+  background-color: var(--pink);
+  color: #000;
+}
+
+.volumeBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.volIcon {
+  font-size: 0.8rem;
+}
+
+.volumeSlider {
+  width: 80px;
+  height: 6px;
+  -webkit-appearance: none;
+  background: var(--purple);
+  outline: none;
+  border: 1px solid var(--cyan);
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: var(--pink);
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.stationsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.stationBtn {
+  font-family: var(--font-retro);
+  font-size: 0.55rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 8px 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s steps(3);
+}
+
+.stationBtn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.activeStationBtn {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  color: #000 !important;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+  text-shadow: none;
+}
+
+/* Hide Radio on small screens to avoid cluttering HUD */
+@media (max-width: 768px) {
+  .radioWrapper {
+    bottom: 10px;
+    left: 10px;
+    width: 220px;
+    padding: 10px;
+    gap: 8px;
+    box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+  .stationName {
+    font-size: 0.9rem;
+  }
+  .genreText {
+    font-size: 0.75rem;
+  }
+  .visualizer {
+    height: 25px;
+  }
+  .volumeSlider {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Let it float higher or auto hide on extremely small screens */
+  .radioWrapper {
+    display: none; /* Auto-hide on mobile devices to preserve readability */
+  }
+}

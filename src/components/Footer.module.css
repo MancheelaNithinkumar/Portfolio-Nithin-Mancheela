@@ -1,0 +1,114 @@
+.footerContainer {
+  background-color: #0b001a;
+  border-top: 4px solid var(--pink);
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.respectBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-retro);
+  gap: 8px;
+  text-align: center;
+}
+
+.passedText {
+  font-size: 1.5rem;
+  color: var(--yellow);
+  text-shadow: 2px 2px 0px #000, 0 0 10px rgba(255, 214, 10, 0.4);
+  letter-spacing: 2px;
+}
+
+.respectText {
+  font-size: 1rem;
+  color: var(--orange);
+  text-shadow: 2px 2px 0px #000;
+  letter-spacing: 1px;
+}
+
+.metaRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px dashed rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyrightText {
+  font-family: var(--font-vcr);
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+}
+
+.savingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-retro);
+  font-size: 0.65rem;
+  color: var(--cyan);
+  text-shadow: 0 0 5px var(--cyan);
+}
+
+.floppyIcon {
+  font-size: 1rem;
+  animation: floppyBlink 1.2s infinite alternate steps(2);
+}
+
+.savingFloppy {
+  animation: floppySpin 0.3s linear infinite;
+  color: var(--yellow);
+  text-shadow: 0 0 10px var(--yellow);
+}
+
+.savingText {
+  animation: textBlink 1.5s infinite alternate steps(2);
+}
+
+.bottomBorderLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--orange) 50%, var(--cyan) 100%);
+}
+
+@keyframes floppyBlink {
+  0%, 49% { opacity: 0.3; }
+  50%, 100% { opacity: 1; }
+}
+
+@keyframes floppySpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes textBlink {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .metaRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
