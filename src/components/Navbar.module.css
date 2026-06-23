@@ -23,8 +23,8 @@
 }
 
 .navLogo {
-  font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-family: var(--font-retro);
+  font-size: 0.9rem;
   color: #fff;
   text-shadow: 2px 2px 0px var(--pink), 4px 4px 0px var(--purple);
   letter-spacing: 1px;

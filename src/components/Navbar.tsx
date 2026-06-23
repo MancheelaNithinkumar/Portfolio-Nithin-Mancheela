@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
       <div className={styles.navContainer}>
         {/* Logo / Title */}
         <a href="#safehouse" onClick={(e) => handleLinkClick(e, "safehouse")} className={styles.navLogo}>
-          NITHIN MANCHEELA
+          Hi,   I'm Nithin
         </a>
 
         {/* Hamburger Menu Icon */}
@@ -89,9 +89,8 @@ export const Navbar: React.FC = () => {
               <a
                 href={`#${item.id}`}
                 onClick={(e) => handleLinkClick(e, item.id)}
-                className={`${styles.navLink} ${
-                  activeSection === item.id ? styles.activeLink : ""
-                }`}
+                className={`${styles.navLink} ${activeSection === item.id ? styles.activeLink : ""
+                  }`}
               >
                 {item.label}
               </a>
