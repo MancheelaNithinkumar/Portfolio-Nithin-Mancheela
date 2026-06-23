@@ -9,7 +9,7 @@ interface LoadingScreenProps {
 
 const loadingArtworks = [
   {
-    title: "NITHIN KUMAR",
+    title: "NITHIN MANCHEELA",
     subtitle: "AI ENGINEER",
     color: "#ff0080",
     gradient: "linear-gradient(135deg, #2b004f 0%, #ff0080 100%)",

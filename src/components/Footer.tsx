@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
         {/* copyright and save details */}
         <div className={styles.metaRow}>
           <p className={styles.copyrightText}>
-            © {new Date().getFullYear()} NITHIN KUMAR. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} NITHIN MANCHEELA. ALL RIGHTS RESERVED.
           </p>
 
           <div className={styles.savingIndicator}>

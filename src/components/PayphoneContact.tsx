@@ -100,14 +100,14 @@ export const PayphoneContact: React.FC = () => {
                 </li>
                 <li>
                   <span className={styles.linkIcon}>🔗</span>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
-                    linkedin.com/in/nithin-kumar
+                  <a href="https://linkedin.com/in/nithin-mancheela" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                    linkedin.com/in/nithin-mancheela
                   </a>
                 </li>
                 <li>
                   <span className={styles.linkIcon}>📁</span>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
-                    github.com/nithinkumar
+                  <a href="https://github.com/MancheelaNithinkumar" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                    github.com/MancheelaNithinkumar
                   </a>
                 </li>
               </ul>

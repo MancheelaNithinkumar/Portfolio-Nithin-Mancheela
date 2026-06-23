@@ -56,7 +56,7 @@ export const AboutPoliceFile: React.FC = () => {
                 </div>
                 <div className={styles.mugshotPlate}>
                   <span>VCPD - 8675309</span>
-                  <span>NITHIN KUMAR</span>
+                  <span>NITHIN MANCHEELA</span>
                 </div>
               </div>
 
@@ -64,7 +64,7 @@ export const AboutPoliceFile: React.FC = () => {
               <div className={styles.fileFields}>
                 <div className={styles.fieldRow}>
                   <span className={styles.fieldLabel}>NAME:</span>
-                  <span className={styles.fieldValue} style={{ color: "var(--pink)" }}>NITHIN KUMAR</span>
+                  <span className={styles.fieldValue} style={{ color: "var(--pink)" }}>NITHIN MANCHEELA</span>
                 </div>
                 <div className={styles.fieldRow}>
                   <span className={styles.fieldLabel}>PROFESSION:</span>

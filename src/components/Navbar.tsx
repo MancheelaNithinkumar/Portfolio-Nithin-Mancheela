@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
       <div className={styles.navContainer}>
         {/* Logo / Title */}
         <a href="#safehouse" onClick={(e) => handleLinkClick(e, "safehouse")} className={styles.navLogo}>
-          NITHIN KUMAR
+          NITHIN MANCHEELA
         </a>
 
         {/* Hamburger Menu Icon */}

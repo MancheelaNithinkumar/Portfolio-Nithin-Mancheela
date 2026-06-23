@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
         <div className={styles.titleContainer}>
           <div className={styles.preTitle}>GTA</div>
           <h1 className="pricedown-title font-heading" style={{ fontSize: "5.5rem" }}>
-            NITHIN KUMAR
+            NITHIN MANCHEELA
           </h1>
           <div className={`${styles.subTitle} flicker-slow`}>
             AI Engineer | ML Enthusiast | Full Stack Developer
